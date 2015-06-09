@@ -1,3 +1,0 @@
-gdm: duplicate-updaterc.d-calls-in-postinst gdm
-# internal use only
-gdm: unused-debconf-template gdm/daemon_name
