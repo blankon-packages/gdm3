@@ -1,7 +1,7 @@
 08_frequent-users_greeter.patch
 09_default_session.patch
 16_xserver_path.patch
-17_switch_on_finish.patch
+#17_switch_on_finish.patch
 18_all_displays_transient.patch
 19_switch_kill_greeter.patch
 90_config_comments.patch

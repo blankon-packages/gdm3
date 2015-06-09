@@ -1,6 +1,6 @@
 [Desktop Entry]
 _Name=System Default
 _Comment=The default session on the system
-Exec=default
+Exec=gnome-session-blankon
 Icon=
 Type=Application
