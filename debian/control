@@ -5,8 +5,9 @@
 Source: gdm3
 Section: gnome
 Priority: optional
-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Andreas Henriksson <andreas@fatal.se>, Josselin Mouette <joss@debian.org>, Laurent Bigonville <bigon@debian.org>
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
+XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Andreas Henriksson <andreas@fatal.se>, Josselin Mouette <joss@debian.org>, Laurent Bigonville <bigon@debian.org>, Michael Biebl <biebl@debian.org>
 Build-Depends: gnome-pkg-tools (>= 0.16.3),
                debhelper (>= 8.1.3),
                cdbs (>= 0.4.122~),
@@ -27,7 +28,6 @@ Build-Depends: gnome-pkg-tools (>= 0.16.3),
                libnss3-dev (>= 3.11.1),
                libx11-dev,
                libxau-dev,
-               libxrandr-dev,
                libxt-dev,
                libxext-dev,
                check (>= 0.9.10-2~),
@@ -39,7 +39,7 @@ Build-Depends: gnome-pkg-tools (>= 0.16.3),
                libxft-dev,
                libxi-dev,
                libxinerama-dev,
-               plymouth-dev | libplymouth-dev,
+               plymouth-dev | libplymouth-dev ,
                yelp-tools,
                libselinux1-dev,
                libattr1-dev,
@@ -47,9 +47,7 @@ Build-Depends: gnome-pkg-tools (>= 0.16.3),
                libaudit-dev,
                docbook-xml,
                gsettings-desktop-schemas,
-               libsystemd-login-dev (>= 186),
-               libsystemd-daemon-dev (>= 186),
-               libsystemd-journal-dev
+               libsystemd-dev
 Standards-Version: 3.9.6
 Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gdm3/
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gdm3/
@@ -67,7 +65,7 @@ Depends: ${shlibs:Depends},
          libpam-systemd [linux-any], consolekit [!linux-any],
          gnome-session-bin (>= 3.10),
          gnome-settings-daemon (>= 3.2),
-         manokwari,
+         gnome-shell (>= 3.10.1-2~),
          gnome-session | x-session-manager | x-window-manager | x-terminal-emulator,
          lsb-base (>= 3.2-14),
          librsvg2-common,
@@ -96,7 +94,8 @@ Replaces: gdm
 Breaks: gnome-panel (<< 3.0),
         gnome-screensaver (<< 2.17.7),
         gnome-orca (<< 2.30.0-2),
-        gnome-control-center (<< 3.0)
+        gnome-control-center (<< 3.0),
+        xserver-xorg-core (<< 2:1.17.2-2~)
 Description: GNOME Display Manager
  GDM provides the equivalent of a "login:" prompt for X displays: it 
  asks for a login and starts graphical sessions.

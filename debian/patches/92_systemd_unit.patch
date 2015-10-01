@@ -1,9 +1,7 @@
-Index: gdm3-3.12.1/data/gdm.service.in
-===================================================================
---- gdm3-3.12.1.orig/data/gdm.service.in	2014-04-27 14:40:14.210580120 +0200
-+++ gdm3-3.12.1/data/gdm.service.in	2014-04-27 14:43:22.350149176 +0200
-@@ -4,12 +4,15 @@ Conflicts=getty@tty@GDM_INITIAL_VT@.serv
- After=systemd-user-sessions.service getty@tty@GDM_INITIAL_VT@.service plymouth-quit.service
+--- a/data/gdm.service.in
++++ b/data/gdm.service.in
+@@ -20,14 +20,17 @@
+ OnFailure=plymouth-quit.service
  
  [Service]
 -ExecStart=@sbindir@/gdm
@@ -12,6 +10,7 @@ Index: gdm3-3.12.1/data/gdm.service.in
 +ExecStart=@sbindir@/gdm3
 +ExecReload=/bin/kill -HUP $MAINPID
 +ExecReload=/usr/share/gdm/generate-config
+ KillMode=mixed
  Restart=always
 +RestartSec=1s
  IgnoreSIGPIPE=no
@@ -20,6 +19,7 @@ Index: gdm3-3.12.1/data/gdm.service.in
 +#BusName=org.gnome.DisplayManager
  StandardOutput=syslog
  StandardError=inherit
+ EnvironmentFile=-@LANG_CONFIG_FILE@
 -
 -[Install]
 -Alias=display-manager.service
