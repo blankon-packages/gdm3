@@ -1,3 +1,9 @@
+gdm3 (3.26.2.1-2blankon2) uluwatu; urgency=medium
+
+  * Drop default session patch
+
+ -- AnTo SamalonA <ansamsoftdev@gmail.com>  Tue, 21 Nov 2017 19:51:37 +0800
+
 gdm3 (3.26.2.1-2blankon1) uluwatu; urgency=medium
 
   * New upstream release
